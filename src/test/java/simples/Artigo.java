@@ -38,7 +38,8 @@ public class Artigo {
            driver.get(url);
           // Pesquisar por Ovo de Páscoa
            driver.findElement(By.id("searchInput")). sendKeys("Ovo de Páscoa");
-           driver.findElement(By.id("searchButton")).sendKeys(Keys.chord("Ovo de Páscoa") + Keys.ENTER);
+           //driver.findElement(By.id("searchButton")).sendKeys(Keys.chord("Ovo de Páscoa") + Keys.ENTER);
+            driver.findElement(By.cssSelector("button.wvui-button")).click();
           // Validar o titulo da página
             // assertEquals("Ovo de Páscoa - Wikipedia, a enciclopédia livre", driver.getTitle());
              assertTrue(driver.getTitle().contains("Ovo de Páscoa"));
